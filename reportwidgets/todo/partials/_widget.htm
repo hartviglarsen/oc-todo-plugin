@@ -1,0 +1,22 @@
+<div class="report-widget">
+	<h3>
+		Todo
+	</h3>
+	
+	<div>
+		<input
+			data-request="<?= $this->getEventHandler('onAdd') ?>"
+			data-request-success="$('#input-item').val('')"
+			data-request-update="list: '#tasks-list'"
+			type="text" 
+			id="input-item" 
+			class="form-control" 
+			name="task" 
+			placeholder="Write a task and hit Enter.." />
+	</div>
+	
+	<div id="tasks-list">
+		<?= $this->makePartial('list') ?>
+	</div>
+</div>
+
