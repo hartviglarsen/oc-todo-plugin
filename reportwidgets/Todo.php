@@ -91,9 +91,10 @@ class Todo extends ReportWidgetBase
      * Store a newly created task
      * 
      * @return bool
+     * @param string $task Task to store
      * @access protected
      */
-    protected function store(string $task)
+    protected function store($task)
     {
         $validator = Validator::make(
             ['task' => $task],
